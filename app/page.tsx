@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Search, ShoppingCart, MoreVertical, ChevronRight } from 'lucide-react';
-import { books } from '@/lib/data';
+import { books } from '@/lib/books';
 import BookGrid from '@/components/BookGrid';
 import BookSlider from '@/components/BookSlider';
 import StatusBar from '@/components/StatusBar';
@@ -32,7 +32,7 @@ export default function Home() {
                 <h2 className="text-lg font-semibold pt-[60px]">AMAZON ORIGINAL STORIES</h2>
                 <ChevronRight className="w-5 h-5" />
               </div>
-              <BookSlider books={books.slice(4)} />
+              <BookSlider books={books} />
             </section>
           </div>
 
