@@ -3,7 +3,7 @@ import { Book } from '@/lib/types';
 
 export default function BookGrid({ books }: { books: Book[] }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[411px]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[399px]">
       {books.map((book) => (
         <Link href={`/reader/${book.id}`} key={book.id}>
           <div className="space-y-2">
@@ -16,7 +16,7 @@ export default function BookGrid({ books }: { books: Book[] }) {
               <img
                 src={book.cover}
                 alt={book.title}
-                className="w-full h-auto aspect-[310/411] object-cover grayscale"
+                className="w-full h-auto aspect-[259/399] object-cover grayscale"
               />
             </div>
             <h3 className="text-sm font-medium">{book.title}</h3>

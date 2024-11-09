@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function BookThumbnail({ book }: { book: Book }) {
   return (
-    <div className="relative w-[310px] h-[411px]">
+    <div className="relative w-[259px] h-[399px]">
       <Image
         src={book.coverImage}
         alt={`Cover for ${book.title}`}
