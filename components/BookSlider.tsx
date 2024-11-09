@@ -10,9 +10,13 @@ interface BookSliderProps {
 
 export default function BookSlider({ books }: BookSliderProps) {
   return (
-    <div className="flex gap-4 overflow-x-auto pb-4 pt-[60px] scrollbar-hide">
+    <div className="flex gap-4 overflow-x-auto pb-4 pt-[0px] scrollbar-hide">
       {books.map((book) => (
-        <Link href={`/reader/${book.id}`} key={book.id} className="flex-shrink-0">
+        <Link 
+          href={`/reader/${book.id}`} 
+          key={book.id} 
+          className="flex-shrink-0 group cursor-pointer"
+        >
           <div className="w-[222px]">
             <img
               src={book.cover}
@@ -20,7 +24,7 @@ export default function BookSlider({ books }: BookSliderProps) {
               className="w-full h-[342px] object-cover grayscale"
             />
             <div className="mt-2">
-              <h3 className="text-sm font-medium">{book.title}</h3>
+              <h3 className="text-sm font-medium hover:underline">{book.title}</h3>
               <p className="text-xs text-gray-600">{book.author}</p>
             </div>
           </div>
